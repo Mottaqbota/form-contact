@@ -10,9 +10,18 @@
 </head>
 <body>
   <div class="card-form">
-    <input placeholder="Nome" id="inputName" type="text">
-    <input placeholder="Email" id="inputEmail" type="email">
-    <input placeholder="Mensagem" id="inputMessage" type="text">
+    <label class="label-inputs">
+      <span>Nome</span>
+      <input required id="inputName" type="text">
+    </label>
+    <label class="label-inputs">
+      <span>Email de contato</span>
+      <input required id="inputEmail" type="text">
+    </label>
+    <label class="label-inputs">
+      <span>Mensagem de contato</span>
+      <input required id="inputMessage" type="text">
+    </label>
     <button onclick="sendForm()">Enviar</button>
   </div>
   <script src="script.js"></script>
