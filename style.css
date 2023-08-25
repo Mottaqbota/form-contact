@@ -23,25 +23,38 @@ body {
 
 input {
   outline: none;
-  padding: 1rem;
-  border-radius: 6px;
+  padding: .8rem;
+  border-radius: .5rem;
   border: solid 3px var(--light-gray);
 }
 
 input:focus {
-  border: solid 3px var(--light-blue);
+  border: solid 3px var(--dark-blue);
 }
 
-/* input:valid {
-  border: solid 3px var(--light-blue);
-}
-input:invalid {
-  border: solid 3px var(--light-gray);
-} */
-
-label {
+.label-inputs span {
   position: absolute;
-  left: 0;
+  font-size: 12px;
+  left: 1rem;
+  pointer-events: none;
+  color: var(--light-gray);
+}
+
+
+.label-inputs input:focus + span {
+  top: -1rem;
+}
+
+input:valid {
+  border: solid 3px var(--light-blue);
+}
+
+.label-inputs {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 }
 
 
@@ -55,7 +68,9 @@ button {
 }
 
 button:hover {
-  opacity: 0.8;
+  color: var(--dark-blue);
+  background: transparent;
+  border: solid 3px var(--light-blue);
 }
 
 button:active {
